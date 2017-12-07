@@ -1,0 +1,30 @@
+.sidebar{
+	float:left;
+	height:100%;
+	width:210px;
+	position: fixed;
+	margin-top: 45px;
+}
+.main-content{
+	float:left;
+	position:relative;
+	padding: 60px 15px 15px 15px;
+	overflow: auto;
+	width: calc(100% - 210px);
+	margin-left: 210px;
+}
+.ivu-menu{
+	height:100%;
+}
+
+
+.dot-left, .dot-right{
+	display: inline-block;
+	position: relative;
+	width: 12px;
+	height: 12px;
+	color: #41b883;
+	background-color: #41b883;
+	border-radius: 50%;
+	margin: 20px 0 0 -5px;
+}
