@@ -36,39 +36,39 @@
             <Col span="8">
                 <Row class="m_row">
                     <VmTabs title="Briefs" content-height="200px">
-                        <VmTabsItem>
-                            <div label="Social" name="01">
-                                <h2>" Lorem ipsum dolor sit amet, consectetur adipiscing. "</h2>
+                        <VmTabsItem label="Social" name="01">
+                            <div>
+                                <h2>social</h2>
                             </div>
                         </VmTabsItem>
 
-                        <VmTabsItem>
-                            <div label="Business" name="02">
-                                <h2>" Phasellus massa urna, vehicula bibendum. "</h2>
+                        <VmTabsItem label="Business" name="02">
+                            <div>
+                                <h2>Business</h2>
                             </div>
                         </VmTabsItem>
 
-                        <VmTabsItem>
-                            <div label="Entertainment" name="03" >
-                                <h2>" Duis vitae dictum erat. In ut lorem turpis. "</h2>
+                        <VmTabsItem label="Entertainment" name="03">
+                            <div>
+                                <h2>Entertainment</h2>
                             </div>
                         </VmTabsItem>
 
-                        <VmTabsItem>
-                            <div label="Sport" name="04">
-                                <h2>" Lorem ipsum dolor sit amet, consectetur adipiscing. "</h2>
+                        <VmTabsItem label="Sport" name="04">
+                            <div>
+                                <h2>Sport</h2>
                             </div>
                         </VmTabsItem>
 
-                        <VmTabsItem>
-                            <div label="Health" name="05">
-                                <h2>" Etiam sit amet urna feugiat, laoreet urna quis. "</h2>
+                        <VmTabsItem label="Health" name="05">
+                            <div>
+                                <h2>Health</h2>
                             </div>
                         </VmTabsItem>
 
-                        <VmTabsItem>
-                            <div label="Educiation" name="06">
-                                <h2>" Fusce nec eleifend ligula. "</h2>
+                        <VmTabsItem label="Educiation" name="06">
+                            <div>
+                                <h2>Educiation</h2>
                             </div>
                         </VmTabsItem>
                     </VmTabs>

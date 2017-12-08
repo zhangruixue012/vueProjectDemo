@@ -24,7 +24,10 @@
 		},
 		mounted: function () {
 			this.updateShow()
-		}
+		},
+        updated:function () {
+            this.updateShow();
+        }
 	}
 </script>
 

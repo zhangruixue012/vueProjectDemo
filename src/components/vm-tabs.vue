@@ -1,7 +1,6 @@
 <template>
     <div class="vm-tabs">
         <div class="tabHeader">
-            <span class="tabHeaderIcon"><Icon class="icon" type="android-contact" size=30 color="#fff"/></span>
             <span class="title">{{ title }}</span>
         </div>
         <div class="tabContent" :style="{height:contentHeight}">
@@ -11,7 +10,7 @@
         </div>
         <div class="tabFooter">
             <ul>
-                <li v-for="(item, index) in navList" @click="getActiveName(index)" :class="{ active: item.active }" >{{item.name}}</li>
+                <li v-for="(item, index) in navList" @click="getActiveName(index)" :class="{ active: item.active }" >{{item.label}}</li>
             </ul>
         </div>
     </div>
@@ -35,6 +34,17 @@
         color:#fff;
         font-weight: 500;
     }
+    .tabFooter li{
+        float:left;
+        margin-right: 15px;
+    }
+    .tabFooter li:hover{
+        cursor:pointer;
+    }
+    .active{
+        color:#41b883;
+    }
+
 </style>
 
 <script>
@@ -53,20 +63,26 @@
 	        },
 	        updateNavList:function () {
 	        	this.navList = [];
-                var itemList = this.$children
+                var itemList = this.$children;
+                var that = this;
                 itemList.forEach(function (item) {
                     var obj = {};
                     obj.label = item.label;
                     obj.name = item.name;
-                    this.activeName == item.name ? obj.active = true : obj.active = false;
-                    this.navList.push(obj);
+                    that.activeName == item.name ? obj.active = true : obj.active = false;
+                    that.navList.push(obj);
                 });
 	        }
         },
 		mounted:function () {
 			this.activeName = this.$children[0].name;
             this.updateNavList();
-		}
+		},
+		watch: {
+			activeName: function () {
+				this.updateNavList()
+			}
+		},
 	}
 </script>
 
