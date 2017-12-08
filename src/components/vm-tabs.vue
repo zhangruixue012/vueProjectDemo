@@ -75,7 +75,7 @@
 	        }
         },
 		mounted:function () {
-			this.activeName = this.$children[0].name;
+			this.activeName = this.$children[1].name;
             this.updateNavList();
 		},
 		watch: {
