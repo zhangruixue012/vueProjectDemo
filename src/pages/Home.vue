@@ -58,9 +58,9 @@
             </div>
 
             <div class="main-content">
+                <Button type="success">{{$t('m.Dashboard')}}</Button>
                 <router-view></router-view>
             </div>
-
     </div>
 
 </template>
@@ -129,6 +129,7 @@
 				spanRight: 20
 			}
 		},
+
 		computed: {
 			iconSize () {
 				return this.spanLeft === 5 ? 14 : 24;
@@ -143,6 +144,25 @@
 					this.spanLeft = 5;
 					this.spanRight = 19;
 				}
+			},
+			changeLangEvent:function() {
+				this.$confirm('确定切换语言吗?', '提示', {
+					confirmButtonText: '确定',
+					cancelButtonText: '取消',
+					type: 'warning'
+				}).then(() => {
+					if ( this.lang === 'zh-CN' ) {
+						this.lang = 'en-US';
+						this.$i18n.locale = this.lang;//关键语句
+					}else {
+						this.lang = 'zh-CN';
+						this.$i18n.locale = this.lang;//关键语句
+					}
+				}).catch(() => {
+					this.$message({
+						type: 'info',
+					});
+				});
 			}
 		}
 	}

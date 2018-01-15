@@ -14,6 +14,8 @@
             </ul>
         </div>
     </div>
+
+
 </template>
 
 <style scoped>
@@ -57,6 +59,7 @@
 		        activeName: String
 	        }
         },
+
         methods:{
 	        getActiveName:function (index) {
                 this.activeName = this.navList[index].name
@@ -75,7 +78,7 @@
 	        }
         },
 		mounted:function () {
-			this.activeName = this.$children[1].name;
+			this.activeName = this.$children[0].name;
             this.updateNavList();
 		},
 		watch: {

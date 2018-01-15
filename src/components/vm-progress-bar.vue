@@ -12,7 +12,7 @@
                 </td>
 
                 <td class="td_40" v-if="item.tags" :key="item.id">
-                    <Tag checkable color="green" v-for="item in item.tags">{{item}}</Tag>
+                    <Tag checkable color="green" v-for="item in item.tags" :key="item.id">{{item}}</Tag>
                 </td>
 
                 <td class="td_40">
