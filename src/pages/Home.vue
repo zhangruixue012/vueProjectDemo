@@ -10,7 +10,7 @@
                     <MenuItem name="Dashboard" >
                         <router-link to="/">
                             <Icon type="ios-navigate" :size="iconSize"></Icon>
-                            Dashboard
+                            {{$t('m.Dashboard')}}
                         </router-link>
                     </MenuItem>
 
@@ -30,28 +30,28 @@
 
                         <router-link :to="{path:'widget',query:{}}">
                             <Icon type="ios-navigate" :size="iconSize"></Icon>
-                            Widget
+                            {{$t('m.Widget')}}
                         </router-link>
                     </MenuItem>
 
                     <MenuItem name="Panels">
                         <router-link to="/Panels">
                             <Icon type="ios-navigate" :size="iconSize"></Icon>
-                            Panels
+                            {{$t('m.Panels')}}
                         </router-link>
                     </MenuItem>
 
                     <MenuItem name="Editor">
                         <router-link to="/Editor">
                             <Icon type="ios-navigate" :size="iconSize"></Icon>
-                            Editor
+                            {{$t('m.Editor')}}
                         </router-link>
                     </MenuItem>
 
                     <MenuItem name="Charts">
                         <router-link to="/Charts">
                             <Icon type="ios-navigate" :size="iconSize"></Icon>
-                            Charts
+                            {{$t('m.Charts')}}
                         </router-link>
                     </MenuItem>
                 </Menu>

@@ -104,7 +104,7 @@
 				dataProgress: [
 					{
 						id: '0',
-						name: 'Jesse Luo',
+						name: 'm.JesseLuo',
 						tags: ['cool', 'funy'],
 						value: 90
 					},
