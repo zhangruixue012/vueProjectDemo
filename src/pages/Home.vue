@@ -58,7 +58,13 @@
             </div>
 
             <div class="main-content">
-                <Button type="success">{{$t('m.Dashboard')}}</Button>
+                <Button type="primary" @click="modal1 = true">{{$t('m.Dashboard')}}</Button>
+
+                <modal v-model=modal1 @on-ok="changeLangEvent" @on-cancel="changeLangEvent">
+                    <!--<p>{{languageContent.chinese}}</p>-->
+                    <!--<p>{{languageContent.english}}</p>-->
+                    <p>是否切换系统语言？</p>
+                </modal>
                 <router-view></router-view>
             </div>
     </div>
@@ -126,10 +132,15 @@
 		data () {
 			return {
 				spanLeft: 4,
-				spanRight: 20
+				spanRight: 20,
+				modal1:false,
+                /*languageContent:{
+					chinese:'zh-CN',
+                    english:'en-US'
+                },
+				lang:false,*/
 			}
 		},
-
 		computed: {
 			iconSize () {
 				return this.spanLeft === 5 ? 14 : 24;
@@ -145,24 +156,14 @@
 					this.spanRight = 19;
 				}
 			},
-			changeLangEvent:function() {
-				this.$confirm('确定切换语言吗?', '提示', {
-					confirmButtonText: '确定',
-					cancelButtonText: '取消',
-					type: 'warning'
-				}).then(() => {
-					if ( this.lang === 'zh-CN' ) {
-						this.lang = 'en-US';
-						this.$i18n.locale = this.lang;//关键语句
-					}else {
-						this.lang = 'zh-CN';
-						this.$i18n.locale = this.lang;//关键语句
-					}
-				}).catch(() => {
-					this.$message({
-						type: 'info',
-					});
-				});
+			changeLangEvent () {
+				if (this.$i18n.locale == 'zh-CN' ) {
+					this.$i18n.locale = 'en-US';
+					/*this.$i18n.locale = this.lang;*///关键语句
+				}else {
+					this.$i18n.locale = 'zh-CN';
+					/*this.locale = this.lang;*///关键语句
+				}
 			}
 		}
 	}
