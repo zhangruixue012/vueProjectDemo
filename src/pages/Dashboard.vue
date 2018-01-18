@@ -99,40 +99,29 @@
             VmTabs,
 	        VmTabsItem
         },
+		created: function () {
+		    this.getData();
+        },
+        methods: {
+		    getData() {
+			    let _this = this;
+			    _this.$http.request({
+				    method: 'get',
+				    url: '/api/mockdata/dashboard.json',
+				    success: function(data) {
+				    	debugger;
+					    dataProgress = Json.parse(data);
+
+				    },
+				    error: function(data) {
+					    console.log(data)
+				    }
+			    })
+            }
+        },
 		data () {
 			return {
-				dataProgress: [
-					{
-						id: '0',
-						name: 'm.JesseLuo',
-						tags: ['cool', 'funy'],
-						value: 90
-					},
-					{
-						id: '1',
-						name: 'Angla Cool',
-						tags: ['nice', 'sexy', 'literature'],
-						value: 30
-					},
-					{
-						id: '2',
-						name: 'lele Wang',
-						tags: ['mould', 'shy'],
-						value: 80
-					},
-					{
-						id: '3',
-						name: 'Jesse Ca',
-						tags: ['funny', 'hardworking', 'learnd'],
-						value: 20
-					},
-					{
-						id: '4',
-						name: 'Jesse Lee',
-						tags: ['nice', 'mould'],
-						value: 100
-					}
-				],
+				dataProgress: [],
 				dataTimeLine:[
                     {
                     	id:"0",

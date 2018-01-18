@@ -1,4 +1,5 @@
 export const m = {
+	switchLanguage:'switch Language',
 	Dashboard: 'Dashboard',
 	Widget:'Widget',
 	Panels:'Panels',

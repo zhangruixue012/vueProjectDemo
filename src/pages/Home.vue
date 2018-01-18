@@ -58,9 +58,8 @@
             </div>
 
             <div class="main-content">
-                <Button type="primary" @click="modal1 = true">{{$t('m.Dashboard')}}</Button>
-
-                <modal v-model=modal1 @on-ok="changeLangEvent" @on-cancel="changeLangEvent">
+                <Button type="primary" @click="modal1 = true">{{$t('m.switchLanguage')}}</Button>
+                <modal v-model=modal1  width="450" :styles="{top: '350px'}" @on-ok="changeLangEvent" >
                     <!--<p>{{languageContent.chinese}}</p>-->
                     <!--<p>{{languageContent.english}}</p>-->
                     <p>是否切换系统语言？</p>

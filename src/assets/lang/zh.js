@@ -1,4 +1,5 @@
 export const m = {
+	switchLanguage:'切换语言',
 	Dashboard: '指示板',
 	Widget:'小部件',
 	Panels:'面板',
