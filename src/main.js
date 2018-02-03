@@ -5,6 +5,7 @@ import App from './App'
 import VueI18n from 'vue-i18n'
 import router from './router'
 import axiosUtil from './utils/axios'
+import Vuex from 'vuex'
 import iView from 'iView'
 import 'iview/dist/styles/iview.css'
 import './theme/demo.css'
@@ -14,6 +15,7 @@ Vue.config.productionTip = false;
 
 Vue.use(VueI18n);
 Vue.use(iView);
+Vue.use(Vuex);
 
 Vue.prototype.$http = axiosUtil;
 
@@ -29,9 +31,9 @@ const i18n = new VueI18n({
 
 /* eslint-disable no-new */
 new Vue({
-  el: '#app',
-    i18n,
-  router,
-  template: '<App/>',
-  components: { App }
-})
+	el: '#app',
+	i18n,
+	router,
+	template: '<App/>',
+	components: { App }
+});

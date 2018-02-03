@@ -128,7 +128,7 @@
 </style>
 <script>
 	export default {
-		data () {
+		data() {
 			return {
 				spanLeft: 4,
 				spanRight: 20,

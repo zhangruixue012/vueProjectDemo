@@ -3,7 +3,7 @@
         <Row class="panel-heading">{{title}}</Row>
         <table>
             <tbody>
-            <tr v-for="(item, index) in rebuildData" :key="item.id">
+            <tr v-for="(item, index) in dataProgress" :key="item.id">
                 <td class="td_10">
                     {{index | indexPlus}}
                 </td>
@@ -49,21 +49,22 @@
 </style>
 <script>
 	export default {
-		name: 'VmUserPreview',
+		name: 'VmProgressBar',
         props:{
 			title:{
 				type:String,
                 default:"WorkingProgress"
             },
-			data:{
-				type:Array
-            }
+	        dataProgress:Array
         },
-		data: function () {
+		data() {
 			return {
-                rebuildData: this.data.slice(0)
+
 			}
 		},
+        mounted(){
+			console.log(this.$props);
+        },
         filters: {
 			indexPlus:function (value) {
                     return ++value

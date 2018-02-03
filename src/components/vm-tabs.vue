@@ -53,7 +53,7 @@
 	export default {
 		name: "vm-tabs",
 		props:['title','contentHeight'],
-        data:function () {
+        data() {
             return {
 		        navList:[],
 		        activeName: String

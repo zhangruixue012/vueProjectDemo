@@ -23,7 +23,7 @@
 
         <Row class="m_row" :gutter="10">
             <Col>
-                <VmProgressBar :data="dataProgress"></VmProgressBar>
+                <VmProgressBar :dataProgress="dataProgress"></VmProgressBar>
             </Col>
         </Row>
 
@@ -99,36 +99,16 @@
             VmTabs,
 	        VmTabsItem
         },
-		created: function () {
-		    this.getData();
-        },
-        methods: {
-		    getData() {
-			    let _this = this;
-			    _this.$http.request({
-				    method: 'get',
-				    url: '/api/mockdata/dashboard.json',
-				    success: function(data) {
-				    	debugger;
-					    dataProgress = Json.parse(data);
-
-				    },
-				    error: function(data) {
-					    console.log(data)
-				    }
-			    })
-            }
-        },
-		data () {
+		data() {
 			return {
 				dataProgress: [],
 				dataTimeLine:[
-                    {
-                    	id:"0",
-                        date:"2017-12-5",
-                        time:"12:00",
-                        content:"Lorem ipsum dolor sit amet consiquest dio"
-                    },
+					{
+						id:"0",
+						date:"2017-12-5",
+						time:"12:00",
+						content:"Lorem ipsum dolor sit amet consiquest dio"
+					},
 					{
 						id:"1",
 						date:"2017-12-4",
@@ -165,10 +145,31 @@
 						time:"18:00",
 						content:"Lorem ipsum dolor sit amet consiquest dio"
 					}
-                ],
-                dataTabs:[],
+				],
+				dataTabs:[],
 			}
-		}
+		},
+		mounted() {
+		    this.getData();
+        },
+        methods: {
+		    getData() {
+		    	const _this = this;
+			    this.$http.request({
+				    method: 'get',
+				    url: '/api/mockdata/dashboard.json',
+				    // success:(data) => {
+					 //    this.dataProgress = [...data];
+				    // },
+                    success:function (data){
+					    _this.dataProgress = data;
+				    },
+				    error:(data) => {
+					    console.log(data)
+				    }
+			    })
+            }
+        }
 	}
 </script>
 

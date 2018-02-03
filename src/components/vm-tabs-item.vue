@@ -8,7 +8,7 @@
 	export default {
 		name: "vm-tabs-item",
 		props: ['name', 'label'],
-		data: function () {
+		data() {
 			return {
 				show: false
 			}
