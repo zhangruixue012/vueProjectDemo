@@ -55,7 +55,7 @@
 
 </template>
 
-<style scoped>
+<style>
     .content,.one_left{
         padding:15px;
     }
