@@ -1,10 +1,10 @@
 <template>
-    <div class="widget">widget</div>
+    <div>流程使用记录</div>
 </template>
 
 <script>
 	export default {
-		name: "Widget"
+		name: "record"
 	}
 </script>
 

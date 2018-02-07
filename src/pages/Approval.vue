@@ -1,10 +1,10 @@
 <template>
-    <div class="panels">panels</div>
+    <div>流程审批</div>
 </template>
 
 <script>
 	export default {
-		name: "panels"
+		name: "approval"
 	}
 </script>
 

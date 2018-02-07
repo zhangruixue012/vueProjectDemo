@@ -1,10 +1,10 @@
 <template>
-    <div class="charts">charts</div>
+    <div>流程列表查询</div>
 </template>
 
 <script>
 	export default {
-		name: "charts"
+		name: "query"
 	}
 </script>
 

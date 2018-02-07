@@ -1,7 +1,7 @@
 {
-  "name": "vuemanage",
+  "name": "process-ui",
   "version": "1.0.0",
-  "description": "vue practice",
+  "description": "process-ui",
   "author": "zrx",
   "private": true,
   "scripts": {

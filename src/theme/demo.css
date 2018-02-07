@@ -1,28 +1,51 @@
-.sidebar{
-	float:left;
-	height:100%;
-	width:210px;
-	position: fixed;
-	margin-top: 45px;
-}
+
 .main-content{
 	float:left;
 	position:relative;
-	padding: 60px 15px 15px 15px;
+	padding: 15px;
 	overflow: auto;
-	width: calc(100% - 210px);
-	margin-left: 210px;
+	width: 100%;
+
 }
 .ivu-menu{
 	height:100%;
 }
-.dot-left, .dot-right{
-	display: inline-block;
-	position: relative;
-	width: 12px;
-	height: 12px;
-	color: #41b883;
-	background-color: #41b883;
-	border-radius: 50%;
-	margin: 20px 0 0 -5px;
+.ivu-icon{
+	margin: 0 5px;
 }
+
+.fl{
+	float:left;
+}
+.fr{
+	float:right;
+}
+
+.main-color{
+	color:#ff3300;
+}
+
+.marginL-240{
+	margin-left: 240px;
+}
+.marginT-15{
+	margin-top: 15px;
+}
+.marginL-30{
+	margin-left: 30px;
+}
+.marginT-20{
+	margin-top: 20px;
+}
+.margin-10{
+	margin:10px;
+}
+.mariginL-15{
+	margin-left: 15px;
+}
+
+.fontSize-16{
+	font-size: 16px;
+}
+
+
